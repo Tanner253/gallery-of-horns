@@ -16,14 +16,14 @@ In the project directory, you can run:
 - Start time: 1:15
 - Finish time: 1:23
 - Actual time needed to complete: 10 mins
-
+---
 - Number and name of feature: # 2 allow voting
 - Estimate of time needed to complete: 30 mins
 - Start time: 1:35
 - Finish time: 1:45
 - Actual time needed to complete: 15 mins
-
-- Number and name of feature: Bootsrapify
+---
+- Number and name of feature: 3 Bootsrapify
 - Estimate of time needed to complete: 1 hour
 - Start time: 2:30
 - Finish time:3:45
