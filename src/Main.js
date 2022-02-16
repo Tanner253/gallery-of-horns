@@ -13,9 +13,9 @@ class Main extends React.Component {
 
         <Row xs={1} md={2} lg={3}>
             {data.map((value, idx) => (
-            <Col>
+            <Col key={idx}>
             <HornedBeast
-              key={idx}
+              
               title={value.title}
               description={value.description}
               image_url={value.image_url}
