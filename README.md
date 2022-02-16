@@ -29,3 +29,4 @@ In the project directory, you can run:
 - Finish time:3:45
 - Actual time needed to complete: 1:15
 
+Collaberated with : Micha Davis
