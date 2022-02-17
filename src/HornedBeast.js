@@ -15,20 +15,24 @@ handleFavorites = () => {
     favorites: this.state.favorites + 1,
     });
 };
+handleUserClick = () => {
+    this.handleFavorites();
+    this.props.handleOpenModal(this.props.beast);
+}
 render() {
     return (
     <article>
         
             <Card style={{ width: '18rem' }}>
                 <Card.Img
-                onClick={this.handleFavorites}
+                onClick={this.handleUserClick}
                 variant="top"
-                src={this.props.image_url}
-                alt={this.props.description}
+                src={this.props.beast.image_url}
+                alt={this.props.beast.description}
                 />
                 <Card.Body>
-                    <Card.Title>{this.props.Title}</Card.Title>
-                    <Card.Text>{this.props.description}</Card.Text>
+                    <Card.Title>{this.props.beast.Title}</Card.Title>
+                    <Card.Text>{this.props.beast.description}</Card.Text>
                     <Card.Text>💖: {this.state.favorites}</Card.Text>
                 </Card.Body>
             </Card>
