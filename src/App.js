@@ -6,13 +6,13 @@ import data from "./data/data.json";
 import SelectedBeast from "./SelectedBeast";
 import './App.css';
 
-
 class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
       showModal: false,
-      beast: {}
+      beast: {},
+      query: '',
     }
   }
 
@@ -28,6 +28,13 @@ handleOpenModal = (beast) => {
   })
 }
 
+getFilteredItems = (query, items) => {
+  if(!query){
+    return items;
+  }
+  return items.filter(beast => beast.title.includes(query) || beast.keyword.includes(query));
+}
+
 
   render(){
     return(
@@ -40,7 +47,9 @@ handleOpenModal = (beast) => {
         />
         <Main 
         data={data}
-        handleOpenModal={this.handleOpenModal}/> 
+        handleOpenModal={this.handleOpenModal}
+        query={this.state.query}
+        getFilteredItems={this.getFilteredItems}/> 
         <Footer />
       </>
     );
