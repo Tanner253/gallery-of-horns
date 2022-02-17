@@ -28,5 +28,12 @@ In the project directory, you can run:
 - Start time: 2:30
 - Finish time:3:45
 - Actual time needed to complete: 1:15
+---
+- Number and name of feature: 4 Modal
+- Estimate of time needed to complete: 1 hour
+- Start time: 2:30
+- Finish time: 4:30
+- Actual time needed to complete: 2 hours
 
-Collaberated with : Micha Davis
+
+Collaberated with : Micha Davis -> Lab 02
