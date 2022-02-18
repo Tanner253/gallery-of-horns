@@ -13,7 +13,7 @@ class SelectedBeast extends React.Component {
             style={{width: '100%'}}
             src={this.props.beast.image_url}
             alt={this.props.beast.description}
-          ></img>
+          />
           <ul>
             <li>
               {this.props.beast.title}

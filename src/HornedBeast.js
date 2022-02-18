@@ -21,7 +21,7 @@ handleUserClick = () => {
 }
 render() {
     return (
-    <article>
+    <article className="text-center">
         
             <Card style={{ width: '18rem' }}>
                 <Card.Img
