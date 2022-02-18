@@ -24,6 +24,12 @@
 - Start time: 2:30
 - Finish time: 4:30
 - Actual time needed to complete: 2 hours
+- ---
+- Number and name of feature: 5 Search bar
+- Estimate of time needed to complete: 1 hour
+- Start time: 7:30
+- Finish time: 9:30
+- Actual time needed to complete: 2 hours
 
 
 Collaberated with : Micha Davis -> Lab 02
