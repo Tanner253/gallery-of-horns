@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
           <label>Search</label>
           <input
             type="text"
-            onInput={(e) =>
+            onChange={(e) =>
               this.props.getFilteredItems(e.target.value, this.props.data)
             }
           />

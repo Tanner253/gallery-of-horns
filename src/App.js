@@ -12,11 +12,15 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       beast: {},
-      query: "",
+      query: '',
       data,
     };
   }
-
+  iDontUnderstandReact = () => {
+    this.setState({
+      understandsReact: false
+    })
+  }
   handleCloseModal = () => {
     this.setState({
       showModal: false,
@@ -51,8 +55,8 @@ class App extends React.Component {
     } else if (selected === "three") {
       let newData = data.filter((data) => data.horns === 3);
       this.setState({ data: newData });
-    } else if (selected === "one-hundred") {
-      let newData = data.filter((data) => data.horns === 100);
+    }else if (selected === "threeplus") {
+      let newData = data.filter((data) => data.horns > 3);
       this.setState({ data: newData });
     } else {
       this.setState({ data: data });
@@ -60,19 +64,18 @@ class App extends React.Component {
   };
 
   render() {
-    console.log("app state", this.state);
     return (
       <>
         <Header />
         <SelectedBeast
           showModal={this.state.showModal}
-          handleCloseModal={this.handleCloseModal}
           beast={this.state.beast}
+          handleCloseModal={this.handleCloseModal}
         />
         <Main
           data={this.state.data}
-          handleOpenModal={this.handleOpenModal}
           query={this.state.query}
+          handleOpenModal={this.handleOpenModal}
           getFilteredItems={this.getFilteredItems}
           handleSelect={this.handleSelect}
         />
