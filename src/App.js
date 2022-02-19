@@ -2,9 +2,9 @@ import React from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import data from "./data/data.json";
 import SelectedBeast from "./SelectedBeast";
 import "./App.css";
+import data from "./data/data.json";
 
 class App extends React.Component {
   constructor(props) {
@@ -16,11 +16,26 @@ class App extends React.Component {
       data,
     };
   }
-  iDontUnderstandReact = () => {
-    this.setState({
-      understandsReact: false
-    })
-  }
+  
+  handleSelect = (event) => {
+    let selected = event.target.value;
+    if (selected === "one") {
+      let newData = data.filter((data) => data.horns === 1);
+      this.setState({ data: newData });
+    } else if (selected === "two") {
+      let newData = data.filter((data) => data.horns === 2);
+      this.setState({ data: newData });
+    } else if (selected === "three") {
+      let newData = data.filter((data) => data.horns === 3);
+      this.setState({ data: newData });
+    }else if (selected === "threeplus") {
+      let newData = data.filter((data) => data.horns > 3);
+      this.setState({ data: newData });
+    } else {
+      this.setState({ data: data });
+    }
+  };
+
   handleCloseModal = () => {
     this.setState({
       showModal: false,
@@ -44,26 +59,8 @@ class App extends React.Component {
     this.setState({ data: filteredItems });
   };
 
-  handleSelect = (event) => {
-    let selected = event.target.value;
-    if (selected === "one") {
-      let newData = data.filter((data) => data.horns === 1);
-      this.setState({ data: newData });
-    } else if (selected === "two") {
-      let newData = data.filter((data) => data.horns === 2);
-      this.setState({ data: newData });
-    } else if (selected === "three") {
-      let newData = data.filter((data) => data.horns === 3);
-      this.setState({ data: newData });
-    }else if (selected === "threeplus") {
-      let newData = data.filter((data) => data.horns > 3);
-      this.setState({ data: newData });
-    } else {
-      this.setState({ data: data });
-    }
-  };
-
   render() {
+    console.log(this.state);
     return (
       <>
         <Header />
@@ -82,6 +79,13 @@ class App extends React.Component {
         <Footer />
       </>
     );
+
+    //We want to change state of parent
+    //state must live in parent component
+    //we must pass a function from where state lives, to the child component 
+    //through props
+    //calling this function from the child component, changes state in the parent component
+    
   }
 }
 
